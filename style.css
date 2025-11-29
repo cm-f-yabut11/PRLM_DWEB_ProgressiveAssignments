@@ -1,0 +1,229 @@
+/*Yabut, Clarence Matthew F. | WD-201 | DWEB*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2a2a2a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/*graff bg*/
+.graffiti-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.graffiti-word {
+    position: absolute;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05);
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: -1;
+    user-select: none;
+}
+
+/*graff words*/
+.word1 { top: 5%; left: 10%; font-size: 8rem; transform: rotate(-15deg); }
+.word2 { top: 15%; right: 15%; font-size: 6rem; transform: rotate(10deg); }
+.word3 { top: 30%; left: 5%; font-size: 7rem; transform: rotate(-5deg); }
+.word4 { top: 45%; right: 8%; font-size: 9rem; transform: rotate(20deg); }
+.word5 { top: 60%; left: 12%; font-size: 8rem; transform: rotate(-10deg); }
+.word6 { top: 75%; right: 5%; font-size: 7rem; transform: rotate(15deg); }
+.word7 { top: 85%; left: 15%; font-size: 6rem; transform: rotate(-20deg); }
+.word8 { top: 10%; left: 50%; font-size: 5rem; transform: rotate(5deg); }
+.word9 { top: 25%; right: 30%; font-size: 6rem; transform: rotate(-8deg); }
+.word10 { top: 40%; left: 40%; font-size: 7rem; transform: rotate(12deg); }         /*these are the words on the back-most background*/
+.word11 { top: 55%; right: 25%; font-size: 8rem; transform: rotate(-12deg); }
+.word12 { top: 70%; left: 20%; font-size: 6rem; transform: rotate(18deg); }
+.word13 { top: 90%; right: 10%; font-size: 7rem; transform: rotate(-15deg); }
+.word14 { top: 20%; left: 70%; font-size: 5rem; transform: rotate(8deg); }
+.word15 { top: 35%; right: 60%; font-size: 6rem; transform: rotate(-10deg); }
+.word16 { top: 50%; left: 60%; font-size: 8rem; transform: rotate(15deg); }
+.word17 { top: 65%; right: 40%; font-size: 7rem; transform: rotate(-18deg); }
+.word18 { top: 80%; left: 50%; font-size: 6rem; transform: rotate(10deg); }
+
+/*main container*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(20, 20, 20, 0.85);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border: 3px solid #86cffa; 
+}
+
+/*headings*/
+h1 {
+    text-align: center;
+    color: #6d039e; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+    font-size: 3em;
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    text-align: center;
+    color: #5282af;
+    margin-bottom: 30px;
+    font-size: 1.4em;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/*product grid*/
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/*product card*/
+.product-card {
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 2px solid #6b9aff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.product-card:nth-child(3n) {
+    transform: rotate(-1deg);
+}
+
+.product-card:nth-child(5n) {
+    transform: rotate(1deg);
+}
+
+.product-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(56, 14, 95, 0.4);
+    z-index: 10;
+}
+
+
+.product-image {
+    width: 100%;
+    height: 280px; 
+    background-color: #444;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*details*/
+.product-name {
+    color: #865ebb;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.product-description {
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/*price display*/
+.price {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/*stock status*/
+.stock {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.in-stock {
+    background-color: #4CAF50;
+}
+
+.low-stock {
+    background-color: #ff9800;
+}
+
+.out-of-stock {
+    background-color: #f44336;
+}
+
+/*rating*/
+.rating {
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/*button*/
+button {
+    background-color: #2833d4; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #0fe4f3;
+    transform: scale(1.05);
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(101, 189, 248, 0.5);
+    color: #b0b0b0;
+}
